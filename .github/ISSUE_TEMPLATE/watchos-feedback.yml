@@ -1,5 +1,6 @@
 name: watchOS-App – Feedback oder Problem
 description: Feedback, einen Fehler oder einen Verbesserungsvorschlag zur STR Remote watchOS-App senden.
+type: bug
 title: "[watchOS] "
 body:
   - type: markdown

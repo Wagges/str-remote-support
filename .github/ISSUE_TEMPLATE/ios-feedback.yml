@@ -1,5 +1,6 @@
 name: iOS-App – Feedback oder Problem
 description: Feedback, einen Fehler oder einen Verbesserungsvorschlag zur STR Remote iOS-App senden.
+type: bug
 title: "[iOS] "
 body:
   - type: markdown

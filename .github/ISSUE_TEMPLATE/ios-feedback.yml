@@ -1,0 +1,48 @@
+name: iOS-App – Feedback oder Problem
+description: Feedback, einen Fehler oder einen Verbesserungsvorschlag zur STR Remote iOS-App senden.
+title: "[iOS] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für dein Feedback zur STR Remote iOS-App. Bitte teile keine Passwörter, privaten IP-Adressen oder anderen vertraulichen Daten.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Art des Feedbacks
+      options:
+        - Problem melden
+        - Verbesserung vorschlagen
+        - Frage oder allgemeines Feedback
+    validations:
+      required: true
+  - type: input
+    id: app_version
+    attributes:
+      label: App-Version
+      description: Zu finden in den Einstellungen der App.
+      placeholder: "z. B. 1.2.0"
+  - type: input
+    id: ios_version
+    attributes:
+      label: iOS-Version und iPhone-Modell
+      placeholder: "z. B. iOS 18.0 auf iPhone 15"
+  - type: textarea
+    id: details
+    attributes:
+      label: Beschreibung
+      description: Was ist passiert bzw. was wünschst du dir?
+      placeholder: Beschreibe das Problem oder deine Idee möglichst konkret.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Nachvollziehen
+      description: Bei einem Fehler: Welche Schritte führen dazu?
+      placeholder: "1. ...\n2. ...\n3. ..."
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten
+      description: Was sollte stattdessen passieren?

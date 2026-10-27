@@ -3,6 +3,28 @@
 Welcome to the official support and feedback repository for **STR Remote for iOS and Apple Watch**.  
 Willkommen im offiziellen Support- und Feedback-Repository für **STR Remote für iOS und Apple Watch**.
 
+## About STR Remote / Über STR Remote
+
+### English
+
+**STR Remote** is a companion app for iPhone and Apple Watch that lets you control compatible speakers running **SoundTouch Reborn** over your local Wi-Fi network.
+
+The app focuses on everyday remote-control functions, including playback control, speaker selection and multiroom control. The Apple Watch app brings convenient controls to your wrist.
+
+**Important:** STR Remote is a separate project from SoundTouch Reborn. It builds on SoundTouch Reborn but does not aim to reproduce all of its features. Some services, music-library management and preset configuration may need to be handled in SoundTouch Reborn itself. Available features can differ between iOS and watchOS.
+
+[View STR Remote on the App Store](https://apps.apple.com/us/app/str-remote-soundtouch-reborn/id6811924121)
+
+### Deutsch
+
+**STR Remote** ist eine Begleit-App für iPhone und Apple Watch, mit der du kompatible Lautsprecher mit **SoundTouch Reborn** über dein lokales WLAN steuern kannst.
+
+Die App konzentriert sich auf die wichtigsten Fernbedienungsfunktionen im Alltag, darunter Wiedergabesteuerung, Lautsprecherauswahl und Multiroom-Steuerung. Mit der Apple-Watch-App stehen praktische Bedienelemente auch am Handgelenk zur Verfügung.
+
+**Wichtig:** STR Remote ist ein eigenständiges Projekt und bleibt von SoundTouch Reborn getrennt. Die App baut auf SoundTouch Reborn auf, soll aber nicht sämtliche Funktionen übernehmen. Einige Dienste sowie die Verwaltung von Musikbibliotheken und die Einrichtung von Presets müssen gegebenenfalls direkt in SoundTouch Reborn erfolgen. Der Funktionsumfang kann sich zwischen iOS und watchOS unterscheiden.
+
+[STR Remote im deutschen App Store ansehen](https://apps.apple.com/de/app/str-remote-soundtouch-reborn/id6811924121)
+
 ## Submit feedback / Feedback einreichen
 
 **[Open feedback forms / Feedbackformulare öffnen](https://github.com/Wagges/str-remote-support/issues/new/choose)**

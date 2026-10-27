@@ -40,3 +40,4 @@ const browserLanguage = navigator.language.toLowerCase().startsWith('de') ? 'de'
 setLanguage(savedLanguage === 'de' || savedLanguage === 'en' ? savedLanguage : browserLanguage);
 buttons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
 </script></body></html>
+

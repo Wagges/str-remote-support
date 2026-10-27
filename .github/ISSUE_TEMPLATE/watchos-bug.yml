@@ -1,7 +1,7 @@
 name: "watchOS – Bug report / Fehler melden"
 description: "Report a problem with the watchOS app / Ein Problem mit der watchOS-App melden"
 title: "[watchOS] Bug: "
-labels: []
+labels: [watchos, bug]
 body:
   - type: markdown
     attributes:

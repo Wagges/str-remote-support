@@ -1,7 +1,7 @@
 name: "iOS – Bug report / Fehler melden"
 description: "Report a problem with the iOS app / Ein Problem mit der iOS-App melden"
 title: "[iOS] Bug: "
-labels: []
+labels: [ios, bug]
 body:
   - type: markdown
     attributes:

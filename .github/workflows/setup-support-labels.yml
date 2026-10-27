@@ -1,0 +1,41 @@
+name: Setup support labels / Support-Labels einrichten
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/setup-support-labels.yml'
+  workflow_dispatch:
+permissions:
+  issues: write
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or update labels and classify existing issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = [["ios","iOS app / iOS-App","1f6feb"],["watchos","Apple Watch app / Apple-Watch-App","8250df"],["bug","Bug report / Fehlermeldung","d73a4a"],["enhancement","Improvement / Verbesserung","a2eeef"],["question","Question / Frage","d4c5f9"],["needs-investigation","Needs investigation / Prüfung nötig","fbca04"],["planned","Planned / Geplant","c5def5"],["in-progress","In progress / In Bearbeitung","0e8a16"],["ready-for-test","Ready for beta testing / Bereit zum Testen","5319e7"],["priority-high","High priority / Hohe Priorität","b60205"],["priority-medium","Medium priority / Mittlere Priorität","ffb000"],["priority-low","Low priority / Niedrige Priorität","c2e0c6"]];
+            for (const [name, description, color] of labels) {
+              try {
+                await github.rest.issues.getLabel({ ...context.repo, name });
+                await github.rest.issues.updateLabel({ ...context.repo, name, description, color });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({ ...context.repo, name, description, color });
+              }
+            }
+            // Only add missing platform/type labels. Never remove existing labels or modify issue contents.
+            for await (const response of github.paginate.iterator(github.rest.issues.listForRepo, { ...context.repo, state: 'all', per_page: 100 })) {
+              for (const issue of response.data) {
+                if (issue.pull_request) continue;
+                const title = issue.title.toLowerCase();
+                const existing = new Set(issue.labels.map(label => typeof label === 'string' ? label : label.name));
+                const wanted = [];
+                if (title.startsWith('[ios]') && !existing.has('ios')) wanted.push('ios');
+                if (title.startsWith('[watchos]') && !existing.has('watchos')) wanted.push('watchos');
+                if ((title.includes('bug:') || title.includes('error') || title.includes('does not work')) && !existing.has('bug')) wanted.push('bug');
+                if ((title.includes('feature:') || title.includes('should ') || title.includes('suggestion')) && !existing.has('enhancement')) wanted.push('enhancement');
+                if (wanted.length) await github.rest.issues.addLabels({ ...context.repo, issue_number: issue.number, labels: wanted });
+              }
+            }

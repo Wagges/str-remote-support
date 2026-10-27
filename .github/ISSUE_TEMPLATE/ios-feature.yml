@@ -1,7 +1,7 @@
 name: "iOS – Feature request / Verbesserung vorschlagen"
 description: "Suggest an improvement for the iOS app / Eine Verbesserung für die iOS-App vorschlagen"
 title: "[iOS] Feature: "
-labels: []
+labels: [ios, enhancement]
 body:
   - type: markdown
     attributes:

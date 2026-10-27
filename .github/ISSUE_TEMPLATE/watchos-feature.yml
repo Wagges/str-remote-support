@@ -1,0 +1,43 @@
+name: "watchOS – Feature request / Verbesserung vorschlagen"
+description: "Suggest an improvement for the watchOS app / Eine Verbesserung für die watchOS-App vorschlagen"
+title: "[watchOS] Feature: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Please complete the form in English or German. / Bitte fülle das Formular auf Englisch oder Deutsch aus."
+  - type: input
+    id: version
+    attributes:
+      label: "App version / App-Version"
+      placeholder: "e.g. 1.0 (100) / z. B. 1.0 (100)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: "Device and OS / Gerät und Betriebssystem"
+      placeholder: "e.g. iPhone 16, iOS 27 / z. B. Apple Watch Series 9, watchOS 27"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Suggestion / Verbesserungsvorschlag"
+      placeholder: "What would you like to improve? / Was möchtest du verbessern?"
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: "Expected benefit / Erwarteter Nutzen"
+      placeholder: "Why would this help? / Warum wäre das hilfreich?"
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional information / Weitere Informationen"
+      placeholder: "Screenshots, recordings or links / Screenshots, Aufnahmen oder Links"
+    validations:
+      required: false

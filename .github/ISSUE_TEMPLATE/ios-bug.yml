@@ -1,0 +1,50 @@
+name: "iOS – Bug report / Fehler melden"
+description: "Report a problem with the iOS app / Ein Problem mit der iOS-App melden"
+title: "[iOS] Bug: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Please complete the form in English or German. / Bitte fülle das Formular auf Englisch oder Deutsch aus."
+  - type: input
+    id: version
+    attributes:
+      label: "App version / App-Version"
+      placeholder: "e.g. 1.0 (100) / z. B. 1.0 (100)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: "Device and OS / Gerät und Betriebssystem"
+      placeholder: "e.g. iPhone 16, iOS 27 / z. B. Apple Watch Series 9, watchOS 27"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Problem description / Fehlerbeschreibung"
+      placeholder: "What happened? / Was ist passiert?"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce / Schritte zur Reproduktion"
+      placeholder: "1. Open... / Öffne...\\n2. Tap... / Tippe..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior / Erwartetes Verhalten"
+      placeholder: "What should happen? / Was sollte passieren?"
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional information / Weitere Informationen"
+      placeholder: "Screenshots, recordings or links / Screenshots, Aufnahmen oder Links"
+    validations:
+      required: false

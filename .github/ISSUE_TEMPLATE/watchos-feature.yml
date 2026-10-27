@@ -1,7 +1,7 @@
 name: "watchOS – Feature request / Verbesserung vorschlagen"
 description: "Suggest an improvement for the watchOS app / Eine Verbesserung für die watchOS-App vorschlagen"
 title: "[watchOS] Feature: "
-labels: []
+labels: [watchos, enhancement]
 body:
   - type: markdown
     attributes:
